@@ -4,7 +4,7 @@ library(tidyverse)
 view(df)
 options(digits = 9)
 
-stuff <- select(df, STUB_1, Difference) %>% 
+data <- select(df, STUB_1, Difference) %>% 
           filter( STUB_1 == 'Crude Oil') %>% 
           rename( Product = STUB_1) %>% 
           mutate( Difference = as.character(Difference)) %>% 
@@ -15,5 +15,5 @@ stuff <- select(df, STUB_1, Difference) %>%
 
 
 
-stuff
+data
 
